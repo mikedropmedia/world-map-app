@@ -12,7 +12,7 @@ import { WorldMapComponent } from './world-map/world-map.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
