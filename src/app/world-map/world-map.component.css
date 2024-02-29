@@ -5,4 +5,23 @@ main {
   flex-wrap: wrap;
   margin-top: 10%;
   max-width: 100%;
+  height: auto;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.country-data {
+  text-align: center;
+  background-color: gainsboro;
+  border-radius: 25px;
+  width: 25%;
+}
+
+path:hover {
+  fill: red;
+  stroke: coral;
 }
