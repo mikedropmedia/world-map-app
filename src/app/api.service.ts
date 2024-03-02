@@ -15,7 +15,7 @@ export class ApiService {
 
   setCountryData(country: string) {
     let subject = new Subject();
-//update fetchCountryData with correct properties and JS syntax to return required properties per assessment. Note: one and two are placeholders for two additional country properties.
+    //update fetchCountryData with correct properties and JS syntax to return required properties per assessment. Note: one and two are placeholders for two additional country properties.
     this.fetchCountryData(country).subscribe((data: any) => {
       subject.next({
         country: data.name,
