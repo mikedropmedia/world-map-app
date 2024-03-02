@@ -1557,7 +1557,12 @@
         </svg>
       </section>
       <section class="country-data">
-        <div>Testing</div>
+        <div *ngIf="country.capital">
+          <h3>
+            Welcome to {{ country }}. The capital city is {{ country.capital }}.
+            The population is...
+          </h3>
+        </div>
       </section>
     </main>
   </body>
