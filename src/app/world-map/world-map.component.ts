@@ -7,7 +7,12 @@ import { ApiService } from '../api.service';
   styleUrl: './world-map.component.css',
 })
 export class WorldMapComponent {
+  constructor(private apiService: ApiService) {}
+
   setCountryData(event: any) {
     console.log('event', event.target.id);
+    this.apiService
+      .fetchCountryData(event.target.id)
+      .subscribe((data) => console.log(data));
   }
 }
