@@ -8,22 +8,22 @@ import { Subject } from 'rxjs';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  fetchCountryData(country: string) {
-    let api = `http://api.worldbank.org/v2/country/all/?format=json`;
+  fetchCountryData(countryCode: string) {
+    const api = `https://api.worldbank.org/v2/country/${countryCode}?format=json`;
     return this.http.get(api);
   }
 
-  setCountryData(country: string) {
-    let subject = new Subject();
-    //update fetchCountryData with correct properties and JS syntax to return required properties per assessment. Note: one and two are placeholders for two additional country properties.
-    this.fetchCountryData(country).subscribe((data: any) => {
+  setCountryData(countryCode: string) {
+    const subject = new Subject();
+    this.fetchCountryData(countryCode).subscribe((data: any) => {
+      const countryData = data;
       subject.next({
-        country: data.name,
-        capital: data.capital,
-        region: data.region,
-        income: data.income,
-        one: data.one,
-        two: data.two,
+        countryName: countryData.name,
+        capitalCity: countryData.capitalCity,
+        region: countryData.region.value,
+        incomeLevel: countryData.incomeLevel.value,
+        lendingType: countryData.lendingType.value,
+        isoCode: countryData.id,
       });
     });
     return subject.asObservable();
