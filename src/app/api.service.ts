@@ -17,7 +17,7 @@ export class ApiService {
       map((response) => this.processApiResponse(response)),
       catchError((error) => {
         console.error('Error fetching country data:', error);
-        return of(null); // Return null or an empty object in case of an error
+        return of(null);
       })
     );
   }
