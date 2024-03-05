@@ -11,7 +11,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getCountryData(countryCode: string): Observable<any> {
-    const url = `${this.baseUrl}/${countryCode}?format=json`;
-    return this.http.get(url);
+    const worldAPI = `${this.baseUrl}/${countryCode}?format=json`;
+    return this.http.get(worldAPI);
   }
 }

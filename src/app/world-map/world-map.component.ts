@@ -15,6 +15,7 @@ export class WorldMapComponent {
     const countryCode = (event.target as SVGElement).id;
     this.apiService.getCountryData(countryCode).subscribe({
       next: (response) => {
+
         this.processApiResponse(response);
         console.log(response);
       },
