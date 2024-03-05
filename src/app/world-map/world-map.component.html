@@ -1558,9 +1558,12 @@
       </section>
       <section class="country-data">
         <div *ngIf="countryData">
-           <p>Country: {{ countryData?.name }}</p>
-    <p>Capital: {{ countryData?.capitalCity }}</p>
-          <!-- Add more fields -->
+          <p>Country: {{ countryData?.name }}</p>
+          <p>Capital: {{ countryData?.capitalCity }}</p>
+          <p>Region: {{ countryData?.region }}</p>
+          <p>Income Level: {{ countryData?.incomeLevel }}</p>
+          <p>Longitude: {{ countryData?.longitude }}</p>
+          <p>Latitude: {{ countryData?.latitude }}</p>
         </div>
       </section>
     </main>
