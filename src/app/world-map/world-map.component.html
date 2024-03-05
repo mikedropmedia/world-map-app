@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
+  <!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,7 @@
   <body>
     <main>
       <section>
+        <h1>The World at Your Fingertips</h1>
         <svg
           xmlns:mapsvg="http://mapsvg.com"
           xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -1557,13 +1558,14 @@
         </svg>
       </section>
       <section class="country-data">
+        <h2>Country Data</h2>
         <div *ngIf="countryData">
-          <p>Country: {{ countryData.countryName }}</p>
-          <p>Capital: {{ countryData.capitalCity }}</p>
-          <p>Region: {{ countryData.region }}</p>
-          <p>Income Level: {{ countryData.incomeLevel }}</p>
-          <p>ISO Code: {{ countryData.iso2Code }}</p>
-          <p>Lending Type: {{ countryData.lendingType }}</p>
+          <p><strong>Country:</strong> {{ countryData.countryName }}</p>
+          <p><strong>Capital:</strong> {{ countryData.capitalCity }}</p>
+          <p><strong>Region:</strong> {{ countryData.region }}</p>
+          <p><strong>Income Level:</strong> {{ countryData.incomeLevel }}</p>
+          <p><strong>ISO Code:</strong> {{ countryData.iso2Code }}</p>
+          <p><strong>Lending Type:</strong> {{ countryData.lendingType }}</p>
         </div>
       </section>
     </main>
