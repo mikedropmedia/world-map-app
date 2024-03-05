@@ -22,6 +22,6 @@ svg {
 }
 
 path:hover {
-  fill: red;
-  stroke: coral;
+  fill: blue;
+  stroke: navajowhite;
 }
