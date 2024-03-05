@@ -1558,12 +1558,12 @@
       </section>
       <section class="country-data">
         <div *ngIf="countryData">
-          <p>Country: {{ countryData?.name }}</p>
-          <p>Capital: {{ countryData?.capitalCity }}</p>
-          <p>Region: {{ countryData?.region }}</p>
-          <p>Income Level: {{ countryData?.incomeLevel }}</p>
-          <p>Longitude: {{ countryData?.longitude }}</p>
-          <p>Latitude: {{ countryData?.latitude }}</p>
+          <p>Country: {{ countryData.countryName }}</p>
+          <p>Capital: {{ countryData.capitalCity }}</p>
+          <p>Region: {{ countryData.region }}</p>
+          <p>Income Level: {{ countryData.incomeLevel }}</p>
+          <p>ISO Code: {{ countryData.iso2Code }}</p>
+          <p>Lending Type: {{ countryData.lendingType }}</p>
         </div>
       </section>
     </main>
