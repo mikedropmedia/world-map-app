@@ -6,18 +6,23 @@ import { ApiService } from '../api.service';
   templateUrl: './world-map.component.html',
   styleUrl: './world-map.component.css',
 })
+
 export class WorldMapComponent {
-  country: any = {};
+  countryData: any = {};
+
   constructor(private apiService: ApiService) {}
 
-  setCountryData(event: any) {
-    console.log('event', event.target.id);
-    this.apiService.setCountryData(event.target.id).subscribe((data: any) => {
-      console.log(data);
-      this.country = {
-        ...data,
-        country: event.target.getAttribute('title'),
-      };
+  getCountryData(event: MouseEvent) {
+    const countryCode = (event.target as SVGElement).id;
+    this.apiService.getCountryData(countryCode).subscribe({
+      next: (data) => {
+        this.countryData = data;
+        console.log(data); // You can now display this data in your template
+      },
+      error: (error) => {
+        console.error('Error fetching country data:', error);
+      }
     });
   }
 }
+
